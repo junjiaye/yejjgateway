@@ -1,0 +1,5 @@
+spring:
+    application:
+        name: yejjgateway
+server:
+    port: 8888
