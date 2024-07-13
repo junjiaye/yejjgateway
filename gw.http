@@ -1,1 +1,51 @@
 GET http://localhost:8888/hello
+
+### gw
+POST http://localhost:8888/gw/cn.yejj.yejjrpc.demo.api.UserService
+Content-Type: application/json
+
+{
+  "service": "cn.yejj.yejjrpc.demo.api.UserService",
+  "methodSign":"getName1int,",
+  "args": [100]
+}
+
+### ga
+POST http://localhost:8888/gw/cn.yejj.yejjrpc.demo.api.UserService
+Content-Type: application/json
+
+{
+  "service": "cn.yejj.yejjrpc.demo.api.UserService",
+  "methodSign":"getName1int,",
+  "args": [100]
+}
+
+
+### yejjrpc
+POST http://localhost:8888/gw/yejjrpc/cn.yejj.yejjrpc.demo.api.UserService
+Content-Type: application/json
+
+{
+  "service": "cn.yejj.yejjrpc.demo.api.UserService",
+  "methodSign":"getName1int,",
+  "args": [100]
+}
+### direct
+POST http://localhost:8888/gw/direct/cn.yejj.yejjrpc.demo.api.UserService
+Content-Type: application/json
+
+{
+  "service": "cn.yejj.yejjrpc.demo.api.UserService",
+  "methodSign":"getName1int,",
+  "args": [100]
+}
+
+### direct backend
+POST http://localhost:8888/gw/direct/cn.yejj.yejjrpc.demo.api.UserService?backend=http://localhost:8081/yejjrpc
+Content-Type: application/json
+
+{
+  "service": "cn.yejj.yejjrpc.demo.api.UserService",
+  "methodSign":"getName1int,",
+  "args": [100]
+}
